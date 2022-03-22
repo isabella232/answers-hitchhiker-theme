@@ -18,7 +18,6 @@ jobs:
     uses: yext/answers-headless/.github/workflows/percy_snapshots_reuse.yml@dev/test-reusable-workflows
     with:
       build_script: npm run setup-test-site && npm run build-test-site
-      # snapshots_script_path: tests/percy/index.js
       percy_script: npx percy exec --parallel -- node tests/percy/index.js
     secrets:
       PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
