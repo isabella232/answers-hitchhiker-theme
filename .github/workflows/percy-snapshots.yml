@@ -19,10 +19,10 @@ jobs:
     with:
       build_script: npm run setup-test-site && npm run build-test-site
       percy_script: npx percy exec --parallel -- node tests/percy/index.js
-    secrets:
-      PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
       PERCY_PARALLEL_NONCE: ${{ needs.nonce.outputs.result }}
       PERCY_PARALLEL_TOTAL: 4
+    secrets:
+      PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
     # runs-on: ubuntu-latest
     # strategy:
