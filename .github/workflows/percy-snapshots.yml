@@ -15,7 +15,7 @@ jobs:
 
   default-snapshots:
     needs: nonce
-    uses: yext/answers-headless/.github/workflows/percy_snapshots_reuse.yml@dev/test-reusable-workflows
+    uses: yext/slapshot-reusable-workflows/.github/workflows/percy_snapshots.yml@v1
     with:
       build_script: npm run setup-test-site && npm run build-test-site
       percy_script: npx percy exec --parallel -- node tests/percy/index.js
@@ -26,7 +26,7 @@ jobs:
 
   iframe-snapshots:
     needs: nonce
-    uses: yext/answers-headless/.github/workflows/percy_snapshots_reuse.yml@dev/test-reusable-workflows
+    uses: yext/slapshot-reusable-workflows/.github/workflows/percy_snapshots.yml@v1
     with:
       build_script: npm run setup-test-site && npm run build-test-site
       percy_script: npx percy exec --parallel -- node tests/percy/index.js iframe
@@ -37,7 +37,7 @@ jobs:
 
   spanish-snapshots:
     needs: nonce
-    uses: yext/answers-headless/.github/workflows/percy_snapshots_reuse.yml@dev/test-reusable-workflows
+    uses: yext/slapshot-reusable-workflows/.github/workflows/percy_snapshots.yml@v1
     with:
       build_script: npm run setup-test-site && npm run build-test-site
       percy_script: npx percy exec --parallel -- node tests/percy/index.js spanish
@@ -48,7 +48,7 @@ jobs:
 
   rtl-snapshots:
     needs: nonce
-    uses: yext/answers-headless/.github/workflows/percy_snapshots_reuse.yml@dev/test-reusable-workflows
+    uses: yext/slapshot-reusable-workflows/.github/workflows/percy_snapshots.yml@v1
     with:
       build_script: npm run setup-test-site && npm run build-test-site
       percy_script: npx percy exec --parallel -- node tests/percy/index.js rtl

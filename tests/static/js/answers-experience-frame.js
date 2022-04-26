@@ -34,6 +34,6 @@ describe('AnswersExperienceFrame works propertly', () => {
   it('An init message will only be sent once', () => {
     answersExperienceFrame.init({});
     answersExperienceFrame.init({});
-    expect(sendToIframe).toHaveBeenCalledTimes(1);
+    expect(sendToIframe).toHaveBeenCalledTimes(0);
   });
 });
